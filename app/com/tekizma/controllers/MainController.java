@@ -7,9 +7,7 @@ import javax.inject.Inject;
 
 import com.tekizma.controllers.routes;
 import com.tekizma.coreUtils.CommonUtils;
-import com.tekizma.modals.LoginResult;
-import com.tekizma.modals.BookDetailBean;
-import com.tekizma.modals.BookIssuedUserDetailBean;
+
 import com.tekizma.services.MainService;
 
 
