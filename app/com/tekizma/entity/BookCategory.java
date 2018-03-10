@@ -1,4 +1,4 @@
-package com.tekizma.entity;
+/*package com.tekizma.entity;
 
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.persistence.*;
@@ -48,3 +48,4 @@ public class BookCategory {
 	}
  
 }
+*/

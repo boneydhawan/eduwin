@@ -1,4 +1,4 @@
-package com.tekizma.entity;
+/*package com.tekizma.entity;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
@@ -51,3 +51,4 @@ public class Branch {
 	
 
 }
+*/

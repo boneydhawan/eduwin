@@ -3,13 +3,6 @@ package com.tekizma.services;
 import java.util.HashMap;
 import java.util.List;
 
-import com.tekizma.entity.BookCategory;
-import com.tekizma.entity.BookIssued;
-import com.tekizma.entity.Role;
-import com.tekizma.entity.UserProfile;
-import com.tekizma.modals.BookDetailBean;
-import com.tekizma.modals.BookIssuedUserDetailBean;
-import com.tekizma.modals.UserProfileBean;
 
 
 /**
@@ -18,7 +11,7 @@ import com.tekizma.modals.UserProfileBean;
 */
 public interface MainService {
     
-    public Boolean addStudent(String name,String email, String password, String phone,String rollNo,String branchId,String roleId);
+   /* public Boolean addStudent(String name,String email, String password, String phone,String rollNo,String branchId,String roleId);
     public UserProfileBean validateUser(String email, String password);
     public List<BookDetailBean> getBookDetails();
     public List<BookCategory> getBookCategory();
@@ -40,7 +33,7 @@ public interface MainService {
     public List<BookIssued> userOldIssuedBookHistory(String userId);
     
     public Boolean updateDetails(String userId,String email,String phone);
-    public String sendEmail(String email);
+    public String sendEmail(String email);*/
     
 /*    public String validateUser(String email, String password);
     public String delContact(String chatId);*/

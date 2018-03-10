@@ -1,34 +1,12 @@
-package com.tekizma.services;
+package com.eduwin.services.impl;
 
 import javax.inject.Inject;
 
 import com.tekizma.coreServices.CommonDao;
 import com.tekizma.coreUtils.CommonUtils;
-import com.tekizma.entity.AboutProject;
-import com.tekizma.entity.BookCategory;
-import com.tekizma.entity.BookDetail;
-import com.tekizma.entity.BookIssued;
-import com.tekizma.entity.Branch;
-import com.tekizma.entity.ProjectCreatedBy;
-import com.tekizma.entity.Role;
-import com.tekizma.entity.UserProfile;
-import com.tekizma.modals.BookDetailBean;
-import com.tekizma.modals.BookIssuedUserDetailBean;
-import com.tekizma.modals.UserProfileBean;
+import com.tekizma.services.MainService;
 
 import play.db.jpa.Transactional;
-
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-import java.util.Properties;    
-import javax.mail.*;    
-import javax.mail.internet.*; 
 
 
 import play.db.jpa.JPAApi;
@@ -49,7 +27,7 @@ public class MainServiceImpl implements MainService{
         this.commonDao = commonDao;
     }
    
-    public Boolean addStudent(String name,String email, String password, String phone,String rollNo,String branchId, String roleId){
+    /*public Boolean addStudent(String name,String email, String password, String phone,String rollNo,String branchId, String roleId){
     	if(!(CommonUtils.isEmpty(name) || CommonUtils.isEmpty(email) || CommonUtils.isEmpty(password) || CommonUtils.isEmpty(phone)  || CommonUtils.isEmpty(rollNo) || CommonUtils.isEmpty(roleId))){
     	    UserProfile userProfile= new UserProfile();
     	    try{
@@ -390,5 +368,5 @@ public class MainServiceImpl implements MainService{
 			status ="notFound";
 		}
         return status;     
-     } 
+     } */
 }

@@ -7,15 +7,11 @@ import javax.inject.Inject;
 
 import com.tekizma.controllers.routes;
 import com.tekizma.coreUtils.CommonUtils;
-import com.tekizma.modals.UserProfileBean;
 import com.tekizma.modals.LoginResult;
 import com.tekizma.modals.BookDetailBean;
 import com.tekizma.modals.BookIssuedUserDetailBean;
 import com.tekizma.services.MainService;
-import com.tekizma.entity.BookCategory;
-import com.tekizma.entity.UserProfile;
-import com.tekizma.entity.Role;
-import com.tekizma.entity.BookIssued;
+
 
 //import jdk.nashorn.internal.ir.ObjectNode;
 import play.db.jpa.Transactional;
@@ -48,7 +44,7 @@ public class MainController extends Controller {
         this.mainService = mainService;
     }
     
-    @Transactional
+   /* @Transactional
     public Result addStudent() {
         String name = request().getQueryString("name");
         String email = request().getQueryString("email");
@@ -253,7 +249,7 @@ public class MainController extends Controller {
     	}else{
     		return status(409,"Error while sending email.");
     	}
-    }
+    }*/
     
 }
 

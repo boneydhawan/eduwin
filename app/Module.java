@@ -1,8 +1,12 @@
+import com.eduwin.services.impl.AboutUsServiceImpl;
+import com.eduwin.services.impl.LoginServiceImpl;
+import com.eduwin.services.impl.MainServiceImpl;
 import com.google.inject.AbstractModule;
 import com.tekizma.coreServices.CommonDao;
 import com.tekizma.coreServices.CommonDaoImpl;
+import com.tekizma.services.AboutUsService;
+import com.tekizma.services.LoginService;
 import com.tekizma.services.MainService;
-import com.tekizma.services.MainServiceImpl;
 
 /**
  * This class is a Guice module that tells Guice how to bind several
@@ -19,6 +23,8 @@ public class Module extends AbstractModule {
     @Override
     public void configure() {
         bind(MainService.class).to(MainServiceImpl.class);
+        bind(LoginService.class).to(LoginServiceImpl.class);
+        bind(AboutUsService.class).to(AboutUsServiceImpl.class);
         bind(CommonDao.class).to(CommonDaoImpl.class);
     }
 

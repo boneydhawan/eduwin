@@ -1,6 +1,8 @@
 package com.tekizma.coreServices;
 
 import java.util.List;
+import java.util.Map;
+
 import javax.inject.Inject;
 import javax.persistence.Query;
 import play.db.jpa.JPAApi;
@@ -19,9 +21,34 @@ public class CommonDaoImpl<T> implements CommonDao<T>{
         return (T)jpaApi.em().find(clazz,id);    
     }
     
-    public void create(T t){
-       jpaApi.em().persist(t);
-    }
+    public List<T> findByNamedQuery(String queryName) {
+		Query queryObject = jpaApi.em().createNamedQuery(queryName);
+		return queryObject.getResultList();
+	}
+    
+    public Object findObjectByNamedQuery(String queryName,
+			Map<String, Object> params) {
+		List<T> results = findByNamedQuery(queryName, params);
+		if (results == null || results.size() == 0 || results.size() > 1) {
+			return null;
+		}
+		return results.get(0);
+	}
+    
+    public List<T> findByNamedQuery(String queryName, Map<String, Object> params) {
+		Query queryObject = jpaApi.em().createNamedQuery(queryName);
+		if (params != null) {
+			for (String key : params.keySet()) {
+				queryObject.setParameter(key, params.get(key));
+			}
+		}
+		return queryObject.getResultList();
+	}
+    
+    public T create(T t) {
+		this.jpaApi.em().persist(t);
+		return t;
+	}
     
     public T update(T t){
         return jpaApi.em().merge(t);
@@ -37,4 +64,6 @@ public class CommonDaoImpl<T> implements CommonDao<T>{
 		t = jpaApi.em().merge(t);
 		jpaApi.em().remove(t);
 	}
+
+
 }

@@ -1,4 +1,4 @@
-package com.tekizma.entity;
+/*package com.tekizma.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -68,3 +68,4 @@ public class ProjectCreatedBy {
     
     
 }
+*/

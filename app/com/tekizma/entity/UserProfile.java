@@ -1,14 +1,11 @@
-package com.tekizma.entity;
+/*package com.tekizma.entity;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.tekizma.coreServices.Persistent;
 import com.tekizma.entity.Role;
-/**
-*
-* @author boney dhawan
-*/
+
 
 @Entity
 @Table(name = "user_profile")
@@ -52,8 +49,8 @@ public class UserProfile{
 		this.role = role;
 	}
 
-	/*@Column(name = "role_id")
-    private Long roleId;*/
+	@Column(name = "role_id")
+    private Long roleId;
     
 	@ManyToOne
     @JoinColumn(name = "branch_id")
@@ -107,21 +104,21 @@ public class UserProfile{
 		this.rollNo = rollNo;
 	}
 
-	/*public Long getRoleId() {
+	public Long getRoleId() {
 		return roleId;
 	}
 
 	public void setRoleId(Long roleId) {
 		this.roleId = roleId;
-	}*/
+	}
 
-	/*public Long getBranchId() {
+	public Long getBranchId() {
 		return branchId;
 	}
 
 	public void setBranchId(Long branchId) {
 		this.branchId = branchId;
-	}*/
+	}
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
@@ -136,3 +133,4 @@ public class UserProfile{
 	}
      	
 }
+*/
