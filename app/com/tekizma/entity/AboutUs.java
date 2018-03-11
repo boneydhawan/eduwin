@@ -17,7 +17,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
 		@NamedQuery(name = "AboutUs.findAll", query = "SELECT b FROM AboutUs b"),
 		@NamedQuery(name = "AboutUs.findById", query = "SELECT b FROM AboutUs b WHERE b.id = :id"),
-		@NamedQuery(name = "AboutUs.findActiveAboutUs", query = "SELECT b FROM AboutUs b WHERE b.isActive='1'")})
+		@NamedQuery(name = "AboutUs.findActiveAboutUs", query = "SELECT a FROM AboutUs a WHERE a.isActive='1'")})
 public class AboutUs {
 	
 	private static final long serialVersionUID = 1L;
@@ -35,7 +35,7 @@ public class AboutUs {
     private String teacherPosition;
     
     @Column(name = "teacher_field")
-    private Long teacherField;
+    private String teacherField;
     
     @Column(name = "teacher_exp_in_years")
     private int teacherExpInYears;
@@ -44,9 +44,9 @@ public class AboutUs {
     private String teacherDesc;
     
     @Column(name = "is_active")
-    private Long isActive;
+    private long isActive;
 
-	public Long getId() {
+	public long getId() {
 		return id;
 	}
 
@@ -70,11 +70,12 @@ public class AboutUs {
 		this.teacherPosition = teacherPosition;
 	}
 
-	public Long getTeacherField() {
+
+	public String getTeacherField() {
 		return teacherField;
 	}
 
-	public void setTeacherField(Long teacherField) {
+	public void setTeacherField(String teacherField) {
 		this.teacherField = teacherField;
 	}
 
@@ -94,11 +95,11 @@ public class AboutUs {
 		this.teacherDesc = teacherDesc;
 	}
 
-	public Long getIsActive() {
+	public long getIsActive() {
 		return isActive;
 	}
 
-	public void setIsActive(Long isActive) {
+	public void setIsActive(long isActive) {
 		this.isActive = isActive;
 	}
    

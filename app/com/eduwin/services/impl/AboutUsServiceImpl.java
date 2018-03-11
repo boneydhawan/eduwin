@@ -40,6 +40,9 @@ public class AboutUsServiceImpl implements AboutUsService{
 	@Override
 	public AboutUsBean getAboutUsInfo() {
 		//GET LOCALE ID
+		/*Map<String, Object> params = new HashMap<String,Object>();
+		params.put("isActive", Long.parseLong("1"));*/
+
 		List<AboutUs> aboutUsDetail = commonDao.findByNamedQuery("AboutUs.findActiveAboutUs");
 		AboutUsBean aboutUsBean = new AboutUsBean();
 		if(!aboutUsDetail.isEmpty())
