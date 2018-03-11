@@ -16,8 +16,8 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement
 @NamedQueries({
 		@NamedQuery(name = "AboutUs.findAll", query = "SELECT b FROM AboutUs b"),
-		@NamedQuery(name = "AboutUs.findById", query = "SELECT b FROM AboutUs b WHERE b.id = :id and is_active='1' limit 1"),
-		@NamedQuery(name = "AboutUs.findActiveAboutUs", query = "SELECT b FROM AboutUs b WHERE is_active='1' limit 1")})
+		@NamedQuery(name = "AboutUs.findById", query = "SELECT b FROM AboutUs b WHERE b.id = :id"),
+		@NamedQuery(name = "AboutUs.findActiveAboutUs", query = "SELECT b FROM AboutUs b WHERE b.is_active='1'")})
 public class AboutUs {
 	
 	private static final long serialVersionUID = 1L;
