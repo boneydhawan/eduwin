@@ -1,10 +1,12 @@
 import com.eduwin.services.impl.AboutUsServiceImpl;
+import com.eduwin.services.impl.GalaryServiceImpl;
 import com.eduwin.services.impl.LoginServiceImpl;
 import com.eduwin.services.impl.MainServiceImpl;
 import com.google.inject.AbstractModule;
 import com.tekizma.coreServices.CommonDao;
 import com.tekizma.coreServices.CommonDaoImpl;
 import com.tekizma.services.AboutUsService;
+import com.tekizma.services.GalaryService;
 import com.tekizma.services.LoginService;
 import com.tekizma.services.MainService;
 
@@ -26,6 +28,7 @@ public class Module extends AbstractModule {
         bind(LoginService.class).to(LoginServiceImpl.class);
         bind(AboutUsService.class).to(AboutUsServiceImpl.class);
         bind(CommonDao.class).to(CommonDaoImpl.class);
+        bind(GalaryService.class).to(GalaryServiceImpl.class)
     }
 
 }
