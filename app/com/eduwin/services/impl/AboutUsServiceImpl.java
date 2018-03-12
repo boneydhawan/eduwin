@@ -41,19 +41,18 @@ public class AboutUsServiceImpl implements AboutUsService{
 	@Override
 	public AboutUsBean getAboutUsInfo(String localeId) {
 		
-		String query="select a from AboutUs a, Locale l where a.isActive='1' and l.nameCode="+localeId;
+		//String query="select a from AboutUs a, Locale l where a.isActive='1' and l.nameCode="+localeCode;
 
-		/*Map<String, Object> params = new HashMap<String,Object>();
+		Map<String, Object> params = new HashMap<String,Object>();
 		params.put("localeId", Long.parseLong(localeId));
 
 		AboutUs aboutUsDetail = (AboutUs) commonDao.findObjectByNamedQuery("AboutUs.findByLocaleId",params);
-		*/
-		List<AboutUs> aboutUsDetailList = (List<AboutUs>) commonDao.executeNativeQuery(query);
-
+		
 		AboutUsBean aboutUsBean = new AboutUsBean();
-		if(!aboutUsDetailList.isEmpty()){
-			BeanUtils.copyProperties(aboutUsDetailList.get(0), aboutUsBean);
-		}			
+		if(aboutUsDetail != null){
+			BeanUtils.copyProperties(aboutUsDetail, aboutUsBean);
+		}
+			
 
 		return aboutUsBean;
 
