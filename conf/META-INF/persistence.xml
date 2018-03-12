@@ -8,9 +8,9 @@
         <non-jta-data-source>DefaultDS</non-jta-data-source>
         <properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://bzrrmykuu-mysql.services.clever-cloud.com:3306/bzrrmykuu" />
-			<property name="javax.persistence.jdbc.user" value="uu7ylswhf38yooxz" />
-			<property name="javax.persistence.jdbc.password" value="ZPBa8ZuWjks9ewze1kn" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://beppwcdls-mysql.services.clever-cloud.com:3306/beppwcdls" />
+			<property name="javax.persistence.jdbc.user" value="uzuypewtcwmcryij" />
+			<property name="javax.persistence.jdbc.password" value="3y95StHxOV9b3Rqye0X" />
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQLInnoDBDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />
 			<property name="hibernate.id.new_generator_mappings" value="false"></property>

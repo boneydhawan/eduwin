@@ -11,6 +11,7 @@ import org.springframework.beans.BeanUtils;
 import com.tekizma.coreServices.CommonDao;
 import com.tekizma.coreUtils.CommonUtils;
 import com.tekizma.entity.AboutUs;
+import com.tekizma.entity.Locale;
 import com.tekizma.entity.Users;
 import com.tekizma.modals.AboutUsBean;
 import com.tekizma.modals.UserBean;
@@ -38,20 +39,36 @@ public class AboutUsServiceImpl implements AboutUsService{
 
 
 	@Override
-	public AboutUsBean getAboutUsInfo() {
-		//GET LOCALE ID
-		/*Map<String, Object> params = new HashMap<String,Object>();
-		params.put("isActive", Long.parseLong("1"));*/
+	public AboutUsBean getAboutUsInfo(String localeId) {
+		
+		//String query="select a from AboutUs a, Locale l where a.isActive='1' and l.nameCode="+localeCode;
 
-		List<AboutUs> aboutUsDetail = commonDao.findByNamedQuery("AboutUs.findActiveAboutUs");
+		Map<String, Object> params = new HashMap<String,Object>();
+		params.put("localeId", Long.parseLong(localeId));
+
+		AboutUs aboutUsDetail = (AboutUs) commonDao.findObjectByNamedQuery("AboutUs.findByLocaleId",params);
 		AboutUsBean aboutUsBean = new AboutUsBean();
-		if(!aboutUsDetail.isEmpty())
-			BeanUtils.copyProperties(aboutUsDetail.get(0), aboutUsBean);
+		if(aboutUsDetail != null)
+			BeanUtils.copyProperties(aboutUsDetail, aboutUsBean);
 
 		return aboutUsBean;
 
 	}
-   
+	
+	@Override
+	public List<Locale> getLocaleList(){
+		List<Locale> localeList = commonDao.findByNamedQuery("Locale.findAll");
+		return localeList;
+	}
+	
+	@Override
+	public Locale getLocaleBasedOnNameCode(String localeNameCode){
+		Map<String, Object> params = new HashMap<String,Object>();
+		params.put("nameCode", localeNameCode);
+		Locale locale = (Locale) commonDao.findObjectByNamedQuery("Locale.findNameCode",params);
+		return locale;
+	}
+	  
     
 
 }

@@ -2,6 +2,10 @@ package com.tekizma.controllers;
 
 import javax.inject.Inject;
 
+import org.apache.commons.lang3.StringUtils;
+
+import com.tekizma.coreUtils.CommonUtils;
+import com.tekizma.entity.Locale;
 import com.tekizma.modals.AboutUsBean;
 import com.tekizma.modals.UserBean;
 import com.tekizma.services.AboutUsService;
@@ -13,6 +17,8 @@ import play.data.FormFactory;
 import play.db.jpa.JPAApi;
 import play.mvc.*;
 import static play.libs.Json.toJson;
+
+import java.util.List;
 
 
 /**
@@ -39,7 +45,12 @@ public class AboutUsController extends Controller {
     public Result getAboutUsInfo() {
         Logger.debug("------Start : Inside getAboutUsInfo");
         try{
-        	AboutUsBean aboutUsDetails=aboutUsService.getAboutUsInfo();
+        	String localeId = request().getQueryString("localeId");
+        	if(StringUtils.isEmpty(localeId)){
+        		Locale locale = aboutUsService.getLocaleBasedOnNameCode("en");
+        		localeId = String.valueOf(locale.getId());
+        	}
+        	AboutUsBean aboutUsDetails=aboutUsService.getAboutUsInfo(localeId);
     		return  ok(toJson(aboutUsDetails));
         }
         catch(Exception e){
@@ -48,6 +59,14 @@ public class AboutUsController extends Controller {
         }
  
     }
+    
+    @Transactional
+    public Result getLocaleList() {
+    	Logger.debug("------Start : Inside getlocaleList");
+    	List<Locale> localeList = aboutUsService.getLocaleList();
+    	return  ok(toJson(localeList));
+    }
+    	
     
     
 }

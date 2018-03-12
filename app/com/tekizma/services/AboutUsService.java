@@ -1,5 +1,8 @@
 package com.tekizma.services;
 
+import java.util.List;
+
+import com.tekizma.entity.Locale;
 import com.tekizma.modals.AboutUsBean;
 
 /**
@@ -8,6 +11,8 @@ import com.tekizma.modals.AboutUsBean;
 */
 public interface AboutUsService {
     
-	public AboutUsBean getAboutUsInfo();
+	public AboutUsBean getAboutUsInfo(String localeCode);
+	public List<Locale> getLocaleList();
+	public Locale getLocaleBasedOnNameCode(String localeId);
   
 }

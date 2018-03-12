@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.SequenceGenerator;
@@ -17,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
 		@NamedQuery(name = "AboutUs.findAll", query = "SELECT b FROM AboutUs b"),
 		@NamedQuery(name = "AboutUs.findById", query = "SELECT b FROM AboutUs b WHERE b.id = :id"),
-		@NamedQuery(name = "AboutUs.findActiveAboutUs", query = "SELECT a FROM AboutUs a WHERE a.isActive='1'")})
+		@NamedQuery(name = "AboutUs.findByLocaleId", query = "select a from AboutUs a where a.isActive='1' and  a.locale.id=:localeId")})
 public class AboutUs {
 	
 	private static final long serialVersionUID = 1L;
@@ -45,6 +47,19 @@ public class AboutUs {
     
     @Column(name = "is_active")
     private long isActive;
+    
+    @ManyToOne
+    @JoinColumn(name = "locale_id")
+    private Locale locale;
+    
+
+	public Locale getLocale() {
+		return locale;
+	}
+
+	public void setLocale(Locale locale) {
+		this.locale = locale;
+	}
 
 	public long getId() {
 		return id;

@@ -6,7 +6,7 @@ public class AboutUsBean {
 	private Long id;
     private String teacherName;
     private String teacherPosition;
-    private Long teacherField;
+    private String teacherField;
     private int teacherExpInYears;
     private String teacherDesc;
     private Long isActive;
@@ -29,10 +29,10 @@ public class AboutUsBean {
 	public void setTeacherPosition(String teacherPosition) {
 		this.teacherPosition = teacherPosition;
 	}
-	public Long getTeacherField() {
+	public String getTeacherField() {
 		return teacherField;
 	}
-	public void setTeacherField(Long teacherField) {
+	public void setTeacherField(String teacherField) {
 		this.teacherField = teacherField;
 	}
 	public int getTeacherExpInYears() {
