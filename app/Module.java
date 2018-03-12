@@ -28,7 +28,7 @@ public class Module extends AbstractModule {
         bind(LoginService.class).to(LoginServiceImpl.class);
         bind(AboutUsService.class).to(AboutUsServiceImpl.class);
         bind(CommonDao.class).to(CommonDaoImpl.class);
-        bind(GalaryService.class).to(GalaryServiceImpl.class)
+        bind(GalaryService.class).to(GalaryServiceImpl.class);
     }
 
 }
