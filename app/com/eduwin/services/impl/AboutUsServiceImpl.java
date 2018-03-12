@@ -47,9 +47,14 @@ public class AboutUsServiceImpl implements AboutUsService{
 		params.put("localeId", Long.parseLong(localeId));
 
 		AboutUs aboutUsDetail = (AboutUs) commonDao.findObjectByNamedQuery("AboutUs.findByLocaleId",params);
+		
 		AboutUsBean aboutUsBean = new AboutUsBean();
-		if(aboutUsDetail != null)
+		if(aboutUsDetail != null){
+			Logger.debug("About Us Detail not null");
 			BeanUtils.copyProperties(aboutUsDetail, aboutUsBean);
+		}else
+			Logger.debug("About Us Detail empty");
+			
 
 		return aboutUsBean;
 

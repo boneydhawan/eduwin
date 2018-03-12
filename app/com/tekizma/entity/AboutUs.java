@@ -48,8 +48,8 @@ public class AboutUs {
     @Column(name = "is_active")
     private long isActive;
     
-    @ManyToOne
-    @JoinColumn(name = "locale_id")
+    @JoinColumn(name="locale_id", referencedColumnName="id")
+	@ManyToOne(optional=false)
     private Locale locale;
     
 

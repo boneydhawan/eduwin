@@ -50,6 +50,7 @@ public class AboutUsController extends Controller {
         		Locale locale = aboutUsService.getLocaleBasedOnNameCode("en");
         		localeId = String.valueOf(locale.getId());
         	}
+        	Logger.debug("Locale Id "+localeId);
         	AboutUsBean aboutUsDetails=aboutUsService.getAboutUsInfo(localeId);
     		return  ok(toJson(aboutUsDetails));
         }
