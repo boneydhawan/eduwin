@@ -9,6 +9,7 @@ GET    /register                     com.tekizma.controllers.LoginController.add
 GET   /getAboutUsInfo                com.tekizma.controllers.AboutUsController.getAboutUsInfo()
 GET   /getLocaleList                com.tekizma.controllers.AboutUsController.getLocaleList()
 GET   /getGalary                    com.tekizma.controllers.GalaryController.getGalryList()
+GET   /getOpinionPoll                   com.tekizma.controllers.OpinionPollController.getOpinionPollDetail()
 
 						
 
