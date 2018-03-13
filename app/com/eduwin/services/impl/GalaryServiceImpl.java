@@ -47,7 +47,7 @@ public class GalaryServiceImpl implements GalaryService{
 		
 		Map<String, Object> params = new HashMap<String,Object>();
 		params.put("localeId", Long.parseLong(localeId));
-		params.put("galaryType", Long.parseLong(localeId));
+		params.put("galaryType", galaryType);
 		
 		List<Galary>  galaryDetail= (List<Galary>) commonDao.findByNamedQuery("Galary.findByTypeAndLocale",params);
 		List<GalaryBean> galaryBeanList = new ArrayList<GalaryBean>();
