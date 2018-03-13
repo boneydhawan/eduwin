@@ -42,7 +42,6 @@ public class Galary {
     private String galaryDetailDesc;
     
     @Column(name = "Gallery_Image_Path")
-    @Type(type="text")
     private String galaryImagePath;
     
     @Column(name = "Gallery_Video_Path", columnDefinition="TEXT")
