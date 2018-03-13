@@ -58,6 +58,7 @@ public class GalaryServiceImpl implements GalaryService{
 				galaryBean.setGalaryType(galaryDetail.get(i).getGalaryType());
 				galaryBean.setGalaryTitle(galaryDetail.get(i).getGalaryTitle());
 				galaryBean.setGalaryDetailDesc(galaryDetail.get(i).getGalaryDetailDesc());
+				System.out.println("_____> Galary Type"+galaryDetail.get(i).getGalaryType());
 				if(galaryDetail.get(i).getGalaryType() == "IMAGE"){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryImagePath());
 				}else if(galaryDetail.get(i).getGalaryType() == "VIDEO"){
@@ -65,6 +66,7 @@ public class GalaryServiceImpl implements GalaryService{
 				}else if(galaryDetail.get(i).getGalaryType() == "AUDIO"){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryAudioPath());
 				}
+				System.out.println("_____> Galary Type"+galaryBean.getLongPath());
 				galaryBeanList.add(galaryBean);
 				
 	        }
