@@ -11,7 +11,7 @@ public class GalaryBean {
     private String shortPath;
     private String longPath;
     private Date updatedDate;
-    
+    private String pdfPath;
     
 	public Date getUpdatedDate() {
 		return updatedDate;
@@ -55,6 +55,13 @@ public class GalaryBean {
 	public void setLongPath(String longPath) {
 		this.longPath = longPath;
 	}
+	public String getPdfPath() {
+		return pdfPath;
+	}
+	public void setPdfPath(String pdfPath) {
+		this.pdfPath = pdfPath;
+	}
+	
     
     
 

@@ -54,6 +54,9 @@ public class Galary {
     @Column(name = "Gallery_Audio_Path")
     private String galaryAudioPath;
     
+    @Column(name = "Gallery_PDF_Path")
+    private String pdfPath;
+    
     @Column(name = "Active_Flag")
     private int isActive;
     
@@ -144,6 +147,14 @@ public class Galary {
 
 	public void setLocale(Locale locale) {
 		this.locale = locale;
+	}
+
+	public String getPdfPath() {
+		return pdfPath;
+	}
+
+	public void setPdfPath(String pdfPath) {
+		this.pdfPath = pdfPath;
 	}
     
     

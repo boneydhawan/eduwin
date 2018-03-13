@@ -59,8 +59,9 @@ public class GalaryServiceImpl implements GalaryService{
 				galaryBean.setGalaryType(galaryDetail.get(i).getGalaryType());
 				galaryBean.setGalaryTitle(galaryDetail.get(i).getGalaryTitle());
 				galaryBean.setGalaryDetailDesc(galaryDetail.get(i).getGalaryDetailDesc());
-				if(galaryDetail.get(i).getGalaryType().equals("IMAGE")){
+				if(galaryDetail.get(i).getGalaryType().equals("IMAGE") || galaryDetail.get(i).getGalaryType().equals("WORKSPACE")){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryImagePath());
+					galaryBean.setPdfPath(galaryDetail.get(i).getPdfPath());
 				}else if(galaryDetail.get(i).getGalaryType().equals("VIDEO")){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryVideoPath());
 					if(galaryDetail.get(i).getGalaryVideoPath().contains("youtube.com")){
