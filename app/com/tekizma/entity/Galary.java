@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
 		@NamedQuery(name = "Galary.findAll", query = "SELECT g FROM Galary g"),
 		@NamedQuery(name = "Galary.findById", query = "SELECT g FROM Galary g WHERE g.id = :id"),
-		@NamedQuery(name = "Galary.findByTypeAndLocale", query = "SELECT g FROM Galary g WHERE g.galaryType=:galaryType and g.locale.id=:localeId")})
+		@NamedQuery(name = "Galary.findByTypeAndLocale", query = "SELECT g FROM Galary g WHERE g.galaryType=:galaryType and g.locale.id=:localeId and isActive='1'")})
 public class Galary {
 	
 	private static final long serialVersionUID = 1L;
