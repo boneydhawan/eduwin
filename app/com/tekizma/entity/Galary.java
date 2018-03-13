@@ -13,6 +13,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import org.hibernate.annotations.Type;
+
 @Entity
 @Table(name = "client_gallery_detail")
 @XmlRootElement
@@ -39,13 +41,16 @@ public class Galary {
     @Column(name = "Gallery_Detail_Desc")
     private String galaryDetailDesc;
     
-    @Column(name = "Gallery_Image_Path")
+    @Column(name = "Gallery_Image_Path", columnDefinition="TEXT")
+    @Type(type="text")
     private String galaryImagePath;
     
-    @Column(name = "Gallery_Video_Path")
+    @Column(name = "Gallery_Video_Path", columnDefinition="TEXT")
+    @Type(type="text")
     private String galaryVideoPath;
     
-    @Column(name = "Gallery_Audio_Path")
+    @Column(name = "Gallery_Audio_Path", columnDefinition="TEXT")
+    @Type(type="text")
     private String galaryAudioPath;
     
     @Column(name = "Active_Flag")
