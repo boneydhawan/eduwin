@@ -60,6 +60,7 @@ public class GalaryServiceImpl implements GalaryService{
 				galaryBean.setGalaryDetailDesc(galaryDetail.get(i).getGalaryDetailDesc());
 				System.out.println("_____> Galary Type"+galaryDetail.get(i).getGalaryType());
 				if(galaryDetail.get(i).getGalaryType() == "IMAGE"){
+					System.out.println("_____> Setting image"+galaryDetail.get(i).getGalaryImagePath());
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryImagePath());
 				}else if(galaryDetail.get(i).getGalaryType() == "VIDEO"){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryVideoPath());
