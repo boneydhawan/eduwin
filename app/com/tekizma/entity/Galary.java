@@ -41,7 +41,7 @@ public class Galary {
     @Column(name = "Gallery_Detail_Desc")
     private String galaryDetailDesc;
     
-    @Column(name = "Gallery_Image_Path", columnDefinition="TEXT")
+    @Column(name = "Gallery_Image_Path", length=65535, columnDefinition="TEXT")
     @Type(type="text")
     private String galaryImagePath;
     
