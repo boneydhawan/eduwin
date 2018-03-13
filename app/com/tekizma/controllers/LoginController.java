@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import com.tekizma.entity.Users;
 import com.tekizma.modals.UserBean;
 import com.tekizma.services.LoginService;
+import com.tekizma.services.OpinionPollService;
 
 import play.db.jpa.Transactional;
 import play.Logger;
