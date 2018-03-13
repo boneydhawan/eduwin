@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
 		@NamedQuery(name = "OpinionPoll.findAll", query = "SELECT b FROM OpinionPoll b"),
 		@NamedQuery(name = "OpinionPoll.findById", query = "SELECT b FROM OpinionPoll b WHERE b.id = :id"),
-		@NamedQuery(name = "OpinionPoll.findByLocaleId", query = "select a from OpinionPoll a where a.isActive='1' and a.locale.id=:localeId")})
+		@NamedQuery(name = "OpinionPoll.findByLocaleId", query = "select o from OpinionPoll o where o.isActive='1' and o.locale.id=:localeId")})
 public class OpinionPoll {
 	
 	private static final long serialVersionUID = 1L;
@@ -33,7 +33,7 @@ public class OpinionPoll {
 	@Column(name = "Opinion_Question")
     private String opinionQuestion;
     
-    @Column(name = "is_active")
+    @Column(name = "Active_Flag")
     private long isActive;
     
     @JoinColumn(name="locale_id", referencedColumnName="id")
