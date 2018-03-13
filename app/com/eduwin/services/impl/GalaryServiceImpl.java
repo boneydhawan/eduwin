@@ -7,6 +7,7 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 
 import com.tekizma.coreServices.CommonDao;
@@ -62,6 +63,12 @@ public class GalaryServiceImpl implements GalaryService{
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryImagePath());
 				}else if(galaryDetail.get(i).getGalaryType().equals("VIDEO")){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryVideoPath());
+					if(galaryDetail.get(i).getGalaryVideoPath().contains("youtube.com")){
+						String videoId=StringUtils.substringAfter(galaryDetail.get(i).getGalaryVideoPath(), "watch?v=");
+						galaryBean.setShortPath(videoId);
+					}else{
+						galaryBean.setShortPath(galaryBean.getLongPath());
+					}
 				}else if(galaryDetail.get(i).getGalaryType().equals("AUDIO")){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryAudioPath());
 				}
