@@ -72,8 +72,8 @@ public class GalaryServiceImpl implements GalaryService{
 				}else if(galaryDetail.get(i).getGalaryType().equals("AUDIO")){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryAudioPath());
 				}
+				galaryBean.setUpdatedDate(galaryDetail.get(i).getUpdatedDate());
 				galaryBeanList.add(galaryBean);
-				
 	        }
 		}
 		return galaryBeanList;

@@ -1,5 +1,7 @@
 package com.tekizma.modals;
 
+import java.util.Date;
+
 public class GalaryBean {
 	
 	private Long id;
@@ -8,7 +10,15 @@ public class GalaryBean {
     private String galaryDetailDesc;
     private String shortPath;
     private String longPath;
+    private Date updatedDate;
     
+    
+	public Date getUpdatedDate() {
+		return updatedDate;
+	}
+	public void setUpdatedDate(Date updatedDate) {
+		this.updatedDate = updatedDate;
+	}
 	public Long getId() {
 		return id;
 	}
