@@ -44,12 +44,10 @@ public class Galary {
     @Column(name = "Gallery_Image_Path")
     private String galaryImagePath;
     
-    @Column(name = "Gallery_Video_Path", columnDefinition="TEXT")
-    @Type(type="text")
+    @Column(name = "Gallery_Video_Path")
     private String galaryVideoPath;
     
-    @Column(name = "Gallery_Audio_Path", columnDefinition="TEXT")
-    @Type(type="text")
+    @Column(name = "Gallery_Audio_Path")
     private String galaryAudioPath;
     
     @Column(name = "Active_Flag")
@@ -90,6 +88,7 @@ public class Galary {
 	public void setGalaryDetailDesc(String galaryDetailDesc) {
 		this.galaryDetailDesc = galaryDetailDesc;
 	}
+
 
 	public String getGalaryImagePath() {
 		return galaryImagePath;

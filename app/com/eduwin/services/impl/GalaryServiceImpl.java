@@ -58,16 +58,15 @@ public class GalaryServiceImpl implements GalaryService{
 				galaryBean.setGalaryType(galaryDetail.get(i).getGalaryType());
 				galaryBean.setGalaryTitle(galaryDetail.get(i).getGalaryTitle());
 				galaryBean.setGalaryDetailDesc(galaryDetail.get(i).getGalaryDetailDesc());
-				System.out.println("_____> Galary Type"+galaryDetail.get(i).getGalaryType());
-				if(galaryDetail.get(i).getGalaryType() == "IMAGE"){
-					System.out.println("_____> Setting image"+galaryDetail.get(i).getGalaryImagePath());
+				System.out.println("----> Galary Type"+galaryDetail.get(i).getGalaryType());
+				if(galaryDetail.get(i).getGalaryType().equals("IMAGE")){
+					System.out.println("---> Setting image"+galaryDetail.get(i).getGalaryImagePath());
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryImagePath());
 				}else if(galaryDetail.get(i).getGalaryType() == "VIDEO"){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryVideoPath());
 				}else if(galaryDetail.get(i).getGalaryType() == "AUDIO"){
 					galaryBean.setLongPath(galaryDetail.get(i).getGalaryAudioPath());
 				}
-				System.out.println("_____> Galary Type"+galaryBean.getLongPath());
 				galaryBeanList.add(galaryBean);
 				
 	        }
