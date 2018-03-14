@@ -7,7 +7,7 @@ public class UserOpinionPollBean {
 	private long userId;
     private String opinionPollId;
     private String votedOption;
-    private int opinionFeedback;
+    private String opinionFeedback;
 	public long getUserId() {
 		return userId;
 	}
@@ -26,10 +26,10 @@ public class UserOpinionPollBean {
 	public void setVotedOption(String votedOption) {
 		this.votedOption = votedOption;
 	}
-	public int getOpinionFeedback() {
+	public String getOpinionFeedback() {
 		return opinionFeedback;
 	}
-	public void setOpinionFeedback(int opinionFeedback) {
+	public void setOpinionFeedback(String opinionFeedback) {
 		this.opinionFeedback = opinionFeedback;
 	}
 	
