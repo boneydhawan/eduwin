@@ -43,7 +43,7 @@ public class OpinionPollServiceImpl implements OpinionPollService{
 		Map<String, Object> params = new HashMap<String,Object>();
 		params.put("localeId", Long.parseLong(localeId));
 
-		List<OpinionPoll> opinionPoll = (List<OpinionPoll>) commonDao.findObjectByNamedQuery("OpinionPoll.findByLocaleId",params);
+		List<OpinionPoll> opinionPoll = (List<OpinionPoll>) commonDao.findByNamedQuery("OpinionPoll.findByLocaleId",params);
 		
 		OpinionPollBean opinionPollBean = new OpinionPollBean();
 		if(!opinionPoll.isEmpty()){
