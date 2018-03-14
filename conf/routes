@@ -10,7 +10,7 @@ GET   /getAboutUsInfo                com.tekizma.controllers.AboutUsController.g
 GET   /getLocaleList                com.tekizma.controllers.AboutUsController.getLocaleList()
 GET   /getGalary                    com.tekizma.controllers.GalaryController.getGalryList()
 GET   /getOpinionPoll                   com.tekizma.controllers.OpinionPollController.getOpinionPollDetail()
-
+GET   /submitPoll                   com.tekizma.controllers.OpinionPollController.saveUserOpinionPoll()
 						
 
 # Map static resources from the /public folder to the /assets URL path
