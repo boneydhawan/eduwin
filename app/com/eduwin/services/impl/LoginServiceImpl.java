@@ -49,13 +49,17 @@ public class LoginServiceImpl implements LoginService{
     			userBean.setOldUser(false);
     			Logger.info("create new user successfully with phoneNumber"+contactNumber);
     			return userBean;		
+    		}else{
+    			Logger.info("User already exist with phoneNumber"+contactNumber);
+    			user.setName(userName);
+    			user.setPlace(place);
+    			Users updatedData= (Users) commonDao.update(user);
+    			BeanUtils.copyProperties(updatedData, userBean);
+        		userBean.setOldUser(true);
     		}
-    		Logger.info("User already exist with phoneNumber"+contactNumber);
-    		BeanUtils.copyProperties(user, userBean);
-    		userBean.setOldUser(true);
     		return userBean;
-    		    		
     	}
+    	Logger.info("Invalid Params received during signup");
     	return null;
 	}
 
