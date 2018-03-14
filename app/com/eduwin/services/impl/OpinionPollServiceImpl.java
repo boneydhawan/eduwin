@@ -2,6 +2,7 @@ package com.eduwin.services.impl;
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -42,12 +43,12 @@ public class OpinionPollServiceImpl implements OpinionPollService{
 		Map<String, Object> params = new HashMap<String,Object>();
 		params.put("localeId", Long.parseLong(localeId));
 
-		OpinionPoll opinionPoll = (OpinionPoll) commonDao.findObjectByNamedQuery("OpinionPoll.findByLocaleId",params);
+		List<OpinionPoll> opinionPoll = (List<OpinionPoll>) commonDao.findObjectByNamedQuery("OpinionPoll.findByLocaleId",params);
 		
 		OpinionPollBean opinionPollBean = new OpinionPollBean();
-		if(opinionPoll != null){
-			opinionPollBean.setId(opinionPollBean.getId());
-			opinionPollBean.setOpinionQuestion(opinionPollBean.getOpinionQuestion());
+		if(!opinionPoll.isEmpty()){
+			opinionPollBean.setId(opinionPoll.get(0).getId());
+			opinionPollBean.setOpinionQuestion(opinionPoll.get(0).getOpinionQuestion());
 		}
 		
 		return opinionPollBean;
