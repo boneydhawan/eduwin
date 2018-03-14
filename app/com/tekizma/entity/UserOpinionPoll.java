@@ -19,7 +19,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
 		@NamedQuery(name = "UserOpinionPoll.findAll", query = "SELECT b FROM UserOpinionPoll b"),
 		@NamedQuery(name = "UserOpinionPoll.findById", query = "SELECT b FROM UserOpinionPoll b WHERE b.id = :id"),
-		@NamedQuery(name = "UserOpinionPoll.findByUserIdAndPollId", query = "SELECT b FROM UserOpinionPoll b WHERE b.opinionPollKey = :opinionPollKey and b.userId = :userId")})
+		@NamedQuery(name = "UserOpinionPoll.findByUserIdAndPollKEY", query = "SELECT b FROM UserOpinionPoll b WHERE b.opinionPollKey = :opinionPollKey and b.userId = :userId")})
 public class UserOpinionPoll {
 	
 	private static final long serialVersionUID = 1L;
@@ -58,13 +58,6 @@ public class UserOpinionPoll {
 		this.userId = userId;
 	}
 
-	public String getOpinionPollId() {
-		return opinionPollId;
-	}
-
-	public void setOpinionPollId(String opinionPollId) {
-		this.opinionPollId = opinionPollId;
-	}
 
 	public String getVotedOption() {
 		return votedOption;
