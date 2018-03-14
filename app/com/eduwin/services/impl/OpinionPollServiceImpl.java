@@ -61,7 +61,7 @@ public class OpinionPollServiceImpl implements OpinionPollService{
 	public UserOpinionPoll getUserOpinionSubmittedPollList(String opinionPollKey, String userId) {
 		Map<String, Object> params = new HashMap<String,Object>();
 		params.put("opinionPollKey", opinionPollKey);
-		params.put("userId", userId);
+		params.put("userId", Long.parseLong(userId));
 
 		List<UserOpinionPoll> opinionPoll = (List<UserOpinionPoll>) commonDao.findByNamedQuery("UserOpinionPoll.findByUserIdAndPollKEY",params);
 		if(!opinionPoll.isEmpty()){
