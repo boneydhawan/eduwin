@@ -32,6 +32,9 @@ public class OpinionPoll {
 
 	@Column(name = "Opinion_Question")
     private String opinionQuestion;
+	
+	@Column(name = "opinion_poll_key")
+    private String opinionPollKey;
     
     @Column(name = "Active_Flag")
     private long isActive;
@@ -70,6 +73,14 @@ public class OpinionPoll {
 
 	public void setLocale(Locale locale) {
 		this.locale = locale;
+	}
+
+	public String getOpinionPollKey() {
+		return opinionPollKey;
+	}
+
+	public void setOpinionPollKey(String opinionPollKey) {
+		this.opinionPollKey = opinionPollKey;
 	}
          
 }

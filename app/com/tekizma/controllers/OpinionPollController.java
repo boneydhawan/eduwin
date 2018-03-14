@@ -61,13 +61,12 @@ public class OpinionPollController extends Controller {
         	}
         	OpinionPollBean opinionPollBean=opinionPollService.getActiveOpinionPoll(localeId);
         	if(opinionPollBean.getId() != null && !StringUtils.isEmpty(userId)){
-        		UserOpinionPoll userOpinionSubmittedPollList = opinionPollService.getUserOpinionSubmittedPollList(opinionPollBean.getId(),userId);
+        		UserOpinionPoll userOpinionSubmittedPollList = opinionPollService.getUserOpinionSubmittedPollList(opinionPollBean.getOpinionPollKey(),userId);
         		if(userOpinionSubmittedPollList != null){
         			UserOpinionPollBean userOpinionPollBean = new UserOpinionPollBean();
         			BeanUtils.copyProperties(userOpinionSubmittedPollList, userOpinionPollBean);
         			opinionPollBean.setOpinionPollBean(userOpinionPollBean);
-        		}
-        			
+        		}        			
         	}
     		return  ok(toJson(opinionPollBean));
         }

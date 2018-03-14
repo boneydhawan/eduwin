@@ -10,6 +10,6 @@ import com.tekizma.modals.OpinionPollBean;
 public interface OpinionPollService {
     
 	public OpinionPollBean getActiveOpinionPoll(String localeId);
-	public UserOpinionPoll getUserOpinionSubmittedPollList(Long opinionPollId,String userId);
+	public UserOpinionPoll getUserOpinionSubmittedPollList(String opinionPollKey,String userId);
   
 }

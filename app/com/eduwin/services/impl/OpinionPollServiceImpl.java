@@ -50,6 +50,7 @@ public class OpinionPollServiceImpl implements OpinionPollService{
 		if(!opinionPoll.isEmpty()){
 			opinionPollBean.setId(opinionPoll.get(0).getId());
 			opinionPollBean.setOpinionQuestion(opinionPoll.get(0).getOpinionQuestion());
+			opinionPollBean.setOpinionPollKey(opinionPoll.get(0).getOpinionPollKey());
 		}
 		
 		return opinionPollBean;
@@ -57,12 +58,12 @@ public class OpinionPollServiceImpl implements OpinionPollService{
 
 
 	@Override
-	public UserOpinionPoll getUserOpinionSubmittedPollList(Long opinionPollId, String userId) {
+	public UserOpinionPoll getUserOpinionSubmittedPollList(String opinionPollKey, String userId) {
 		Map<String, Object> params = new HashMap<String,Object>();
-		params.put("opinionPollId", opinionPollId);
+		params.put("opinionPollKey", opinionPollKey);
 		params.put("userId", userId);
 
-		List<UserOpinionPoll> opinionPoll = (List<UserOpinionPoll>) commonDao.findByNamedQuery("UserOpinionPoll.findByUserIdAndPollId",params);
+		List<UserOpinionPoll> opinionPoll = (List<UserOpinionPoll>) commonDao.findByNamedQuery("UserOpinionPoll.findByUserIdAndPollKEY",params);
 		if(!opinionPoll.isEmpty()){
 			return opinionPoll.get(0);
 		}

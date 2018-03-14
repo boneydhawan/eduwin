@@ -4,6 +4,7 @@ public class OpinionPollBean {
 	
 	private Long id;
     private String opinionQuestion;
+    private String opinionPollKey;
     private UserOpinionPollBean opinionPollBean;
 	public Long getId() {
 		return id;
@@ -23,6 +24,13 @@ public class OpinionPollBean {
 	public void setOpinionPollBean(UserOpinionPollBean opinionPollBean) {
 		this.opinionPollBean = opinionPollBean;
 	}
+	public String getOpinionPollKey() {
+		return opinionPollKey;
+	}
+	public void setOpinionPollKey(String opinionPollKey) {
+		this.opinionPollKey = opinionPollKey;
+	}
+	
 	
 
 
