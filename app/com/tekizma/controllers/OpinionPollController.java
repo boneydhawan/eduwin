@@ -77,6 +77,27 @@ public class OpinionPollController extends Controller {
  
     }
     
+    @Transactional
+    public Result saveOpinionPollDetail() {
+    	String userId =request().getQueryString("userId");
+    	String opinionPollKey=request().getQueryString("opinionPollKey");
+    	String votedOption=request().getQueryString("votedOption");
+    	String opinionFeedback=request().getQueryString("opinionFeedback");
+    	if(!(StringUtils.isEmpty(userId) && StringUtils.isEmpty(votedOption) && StringUtils.isEmpty(opinionPollKey))){
+    		try{
+    			UserOpinionPoll userOpinion = opinionPollService.saveUserOpinionPoll(Long.parseLong(userId),opinionPollKey,votedOption,opinionFeedback);
+            	if(userOpinion != null){
+            		return ok(toJson(userOpinion));
+            	}
+    		}catch(Exception e){
+            	e.printStackTrace();
+            	return status(500,"Error while saving Opinion Detail");
+            }
+    		
+    	}
+    	return status(500,"Invalid Inputs");
+    }
+    
     
 }
 

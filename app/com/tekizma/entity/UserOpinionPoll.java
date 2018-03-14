@@ -22,6 +22,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 		@NamedQuery(name = "UserOpinionPoll.findByUserIdAndPollKEY", query = "SELECT b FROM UserOpinionPoll b WHERE b.opinionPollKey = :opinionPollKey and b.userId = :userId")})
 public class UserOpinionPoll {
 	
+	public String getOpinionPollKey() {
+		return opinionPollKey;
+	}
+
+	public void setOpinionPollKey(String opinionPollKey) {
+		this.opinionPollKey = opinionPollKey;
+	}
+
 	private static final long serialVersionUID = 1L;
 	
 	

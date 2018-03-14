@@ -5,7 +5,6 @@ import javax.persistence.Column;
 public class UserOpinionPollBean {
 	
 	private long userId;
-    private String opinionPollId;
     private String votedOption;
     private String opinionFeedback;
 	public long getUserId() {
@@ -13,12 +12,6 @@ public class UserOpinionPollBean {
 	}
 	public void setUserId(long userId) {
 		this.userId = userId;
-	}
-	public String getOpinionPollId() {
-		return opinionPollId;
-	}
-	public void setOpinionPollId(String opinionPollId) {
-		this.opinionPollId = opinionPollId;
 	}
 	public String getVotedOption() {
 		return votedOption;

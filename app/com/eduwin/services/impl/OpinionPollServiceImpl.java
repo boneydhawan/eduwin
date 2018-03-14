@@ -69,7 +69,22 @@ public class OpinionPollServiceImpl implements OpinionPollService{
 		}
 		return null;
 	}
-
+	
+	@Override
+	public UserOpinionPoll saveUserOpinionPoll(Long userId,String opinionPollKey,String votedOption,String opinionFeedback){
+		
+		UserOpinionPoll preparePollDetail = new UserOpinionPoll();
+		preparePollDetail.setOpinionFeedback(opinionFeedback);
+		preparePollDetail.setVotedOption(votedOption);
+		preparePollDetail.setUserId(userId);
+		preparePollDetail.setOpinionPollKey(opinionPollKey);
+		UserOpinionPoll saveUserOpinionPoll = (UserOpinionPoll) commonDao.create(preparePollDetail);
+		if(saveUserOpinionPoll != null)
+			return saveUserOpinionPoll;
+		
+		return null;
+		
+	}
 
 	
 }
