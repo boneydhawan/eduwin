@@ -40,7 +40,7 @@ public class UserOpinionPoll {
     private String votedOption;
     
     @Column(name = "Opinion_FeedBack")
-    private int opinionFeedback;
+    private String opinionFeedback;
 
 	public Long getId() {
 		return id;
@@ -67,11 +67,11 @@ public class UserOpinionPoll {
 		this.votedOption = votedOption;
 	}
 
-	public int getOpinionFeedback() {
+	public String getOpinionFeedback() {
 		return opinionFeedback;
 	}
 
-	public void setOpinionFeedback(int opinionFeedback) {
+	public void setOpinionFeedback(String opinionFeedback) {
 		this.opinionFeedback = opinionFeedback;
 	}
     
