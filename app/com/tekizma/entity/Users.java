@@ -11,6 +11,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.tekizma.coreServices.Persistent;
+
 @Entity
 @Table(name = "Users")
 @XmlRootElement
@@ -18,7 +20,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 		@NamedQuery(name = "Users.findAll", query = "SELECT b FROM Users b"),
 		@NamedQuery(name = "Users.findById", query = "SELECT b FROM Users b WHERE b.id = :id"),
 		@NamedQuery(name = "Users.findByPhoneNumber", query = "SELECT b FROM Users b WHERE b.phoneNumber = :phoneNumber")})
-public class Users {
+public class Users extends Persistent{
 	
 	private static final long serialVersionUID = 1L;
 	

@@ -16,18 +16,18 @@ public class Persistent implements Serializable{
 	
 	private static final long serialVersionUID = 1L;
 	
-	@Column(name = "created_by")
+	@Column(name = "Added_User")
 	private String createdBy;
 	
-	@Column(name = "updated_by")
+	@Column(name = "Updated_User")
 	private String updatedBy;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "created_date")
+	@Column(name = "Added_Date")
 	private Date createdDate;
 	
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "updated_date")
+	@Column(name = "Updated_Date")
 	private Date updatedDate;
 	
 	@PrePersist
@@ -36,8 +36,8 @@ public class Persistent implements Serializable{
 		calendar.setTime(new Date());
 		this.setCreatedDate(calendar.getTime());
 		this.setUpdatedDate(calendar.getTime());
-		this.setCreatedBy("SYSTEM");
-		this.setUpdatedBy("SYSTEM");
+		this.setCreatedBy("MOB_APP");
+		this.setUpdatedBy("MOB_APP");
 	}
 	
 	@PreUpdate
@@ -45,7 +45,7 @@ public class Persistent implements Serializable{
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(new Date());
 		this.setUpdatedDate(calendar.getTime());
-		this.setUpdatedBy("SYSTEM");
+		this.setUpdatedBy("MOB_APP");
 	}
 
 	public String getCreatedBy() {
