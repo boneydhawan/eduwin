@@ -1,5 +1,6 @@
 package com.tekizma.services;
 
+import com.tekizma.entity.UserOpinionPoll;
 import com.tekizma.modals.OpinionPollBean;
 
 /**
@@ -9,5 +10,6 @@ import com.tekizma.modals.OpinionPollBean;
 public interface OpinionPollService {
     
 	public OpinionPollBean getActiveOpinionPoll(String localeId);
+	public UserOpinionPoll getUserOpinionSubmittedPollList(Long opinionPollId,String userId);
   
 }

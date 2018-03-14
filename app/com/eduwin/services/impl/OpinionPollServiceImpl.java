@@ -12,6 +12,7 @@ import org.springframework.beans.BeanUtils;
 import com.tekizma.coreServices.CommonDao;
 import com.tekizma.entity.AboutUs;
 import com.tekizma.entity.OpinionPoll;
+import com.tekizma.entity.UserOpinionPoll;
 import com.tekizma.modals.AboutUsBean;
 import com.tekizma.modals.OpinionPollBean;
 
@@ -52,6 +53,20 @@ public class OpinionPollServiceImpl implements OpinionPollService{
 		}
 		
 		return opinionPollBean;
+	}
+
+
+	@Override
+	public UserOpinionPoll getUserOpinionSubmittedPollList(Long opinionPollId, String userId) {
+		Map<String, Object> params = new HashMap<String,Object>();
+		params.put("opinionPollId", opinionPollId);
+		params.put("userId", userId);
+
+		List<UserOpinionPoll> opinionPoll = (List<UserOpinionPoll>) commonDao.findByNamedQuery("UserOpinionPoll.findByUserIdAndPollId",params);
+		if(!opinionPoll.isEmpty()){
+			return opinionPoll.get(0);
+		}
+		return null;
 	}
 
 
