@@ -13,6 +13,8 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import com.tekizma.coreServices.Persistent;
+
 @Entity
 @Table(name = "User_Opinion_Poll")
 @XmlRootElement
@@ -20,7 +22,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 		@NamedQuery(name = "UserOpinionPoll.findAll", query = "SELECT b FROM UserOpinionPoll b"),
 		@NamedQuery(name = "UserOpinionPoll.findById", query = "SELECT b FROM UserOpinionPoll b WHERE b.id = :id"),
 		@NamedQuery(name = "UserOpinionPoll.findByUserIdAndPollKEY", query = "SELECT b FROM UserOpinionPoll b WHERE b.opinionPollKey = :opinionPollKey and b.userId = :userId")})
-public class UserOpinionPoll {
+public class UserOpinionPoll extends Persistent{
 	
 	public String getOpinionPollKey() {
 		return opinionPollKey;
