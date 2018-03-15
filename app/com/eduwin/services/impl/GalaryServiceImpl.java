@@ -8,22 +8,13 @@ import java.util.Map;
 import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
-import org.springframework.beans.BeanUtils;
 
 import com.tekizma.coreServices.CommonDao;
-import com.tekizma.coreUtils.CommonUtils;
-import com.tekizma.entity.AboutUs;
 import com.tekizma.entity.Galary;
-import com.tekizma.entity.Locale;
-import com.tekizma.entity.Users;
-import com.tekizma.modals.AboutUsBean;
+
 import com.tekizma.modals.GalaryBean;
-import com.tekizma.modals.UserBean;
-import com.tekizma.services.AboutUsService;
 import com.tekizma.services.GalaryService;
-import com.tekizma.services.LoginService;
-import play.db.jpa.Transactional;
-import play.Logger;
+
 
 import play.db.jpa.JPAApi;
 /**

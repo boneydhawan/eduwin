@@ -1,9 +1,5 @@
 package com.tekizma.services;
 
-import java.util.HashMap;
-import java.util.List;
-
-import com.tekizma.entity.Users;
 import com.tekizma.modals.UserBean;
 
 /**

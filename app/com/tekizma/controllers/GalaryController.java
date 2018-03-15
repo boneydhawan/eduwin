@@ -4,15 +4,10 @@ import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.tekizma.coreUtils.CommonUtils;
 import com.tekizma.entity.Locale;
-import com.tekizma.modals.AboutUsBean;
 import com.tekizma.modals.GalaryBean;
-import com.tekizma.modals.UserBean;
 import com.tekizma.services.AboutUsService;
 import com.tekizma.services.GalaryService;
-import com.tekizma.services.LoginService;
-
 import play.db.jpa.Transactional;
 import play.Logger;
 import play.data.FormFactory;

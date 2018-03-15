@@ -12,7 +12,6 @@ import com.tekizma.coreUtils.CommonUtils;
 import com.tekizma.entity.Users;
 import com.tekizma.modals.UserBean;
 import com.tekizma.services.LoginService;
-import play.db.jpa.Transactional;
 import play.Logger;
 
 import play.db.jpa.JPAApi;

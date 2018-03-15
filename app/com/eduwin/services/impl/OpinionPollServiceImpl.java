@@ -7,19 +7,14 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-import org.springframework.beans.BeanUtils;
 
 import com.tekizma.coreServices.CommonDao;
-import com.tekizma.entity.AboutUs;
 import com.tekizma.entity.OpinionPoll;
 import com.tekizma.entity.UserOpinionPoll;
-import com.tekizma.modals.AboutUsBean;
 import com.tekizma.modals.OpinionPollBean;
 
 import com.tekizma.services.OpinionPollService;
 
-import play.db.jpa.Transactional;
-import play.Logger;
 
 import play.db.jpa.JPAApi;
 /**

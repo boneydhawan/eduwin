@@ -1,21 +1,15 @@
 package com.tekizma.controllers;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import javax.inject.Inject;
 
-import com.tekizma.entity.Users;
 import com.tekizma.modals.UserBean;
 import com.tekizma.services.LoginService;
-import com.tekizma.services.OpinionPollService;
 
 import play.db.jpa.Transactional;
 import play.Logger;
 import play.data.FormFactory;
 import play.db.jpa.JPAApi;
 import play.mvc.*;
-import views.html.*;
 import static play.libs.Json.toJson;
 
 

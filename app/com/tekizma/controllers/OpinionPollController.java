@@ -1,8 +1,5 @@
 package com.tekizma.controllers;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
@@ -10,13 +7,11 @@ import org.springframework.beans.BeanUtils;
 
 import com.tekizma.entity.Locale;
 import com.tekizma.entity.UserOpinionPoll;
-import com.tekizma.entity.Users;
-import com.tekizma.modals.AboutUsBean;
+
 import com.tekizma.modals.OpinionPollBean;
-import com.tekizma.modals.UserBean;
+
 import com.tekizma.modals.UserOpinionPollBean;
 import com.tekizma.services.AboutUsService;
-import com.tekizma.services.LoginService;
 import com.tekizma.services.OpinionPollService;
 
 import play.db.jpa.Transactional;

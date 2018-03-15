@@ -1,6 +1,5 @@
 package com.tekizma.modals;
 
-import javax.persistence.Column;
 
 public class AboutUsBean {
 	private Long id;
