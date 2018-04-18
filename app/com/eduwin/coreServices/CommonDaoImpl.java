@@ -1,4 +1,4 @@
-package com.tekizma.coreServices;
+package com.eduwin.coreServices;
 
 import java.util.List;
 import java.util.Map;

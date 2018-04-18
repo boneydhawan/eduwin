@@ -1,11 +1,13 @@
-package com.tekizma.controllers;
+package com.eduwin.controllers;
 
 import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
-import com.tekizma.entity.Locale;
-import com.tekizma.modals.AboutUsBean;
-import com.tekizma.services.AboutUsService;
+
+import com.eduwin.entity.Locale;
+import com.eduwin.modals.AboutUsBean;
+import com.eduwin.services.AboutUsService;
+
 import play.db.jpa.Transactional;
 import play.Logger;
 import play.data.FormFactory;

@@ -1,6 +1,6 @@
-package com.tekizma.services;
+package com.eduwin.services;
 
-import com.tekizma.modals.UserBean;
+import com.eduwin.modals.UserBean;
 
 /**
 *

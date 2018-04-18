@@ -1,9 +1,9 @@
-package com.tekizma.controllers;
+package com.eduwin.controllers;
 
 import javax.inject.Inject;
 
-import com.tekizma.modals.UserBean;
-import com.tekizma.services.LoginService;
+import com.eduwin.modals.UserBean;
+import com.eduwin.services.LoginService;
 
 import play.db.jpa.Transactional;
 import play.Logger;

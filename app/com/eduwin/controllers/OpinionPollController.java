@@ -1,18 +1,16 @@
-package com.tekizma.controllers;
+package com.eduwin.controllers;
 
 import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 
-import com.tekizma.entity.Locale;
-import com.tekizma.entity.UserOpinionPoll;
-
-import com.tekizma.modals.OpinionPollBean;
-
-import com.tekizma.modals.UserOpinionPollBean;
-import com.tekizma.services.AboutUsService;
-import com.tekizma.services.OpinionPollService;
+import com.eduwin.entity.Locale;
+import com.eduwin.entity.UserOpinionPoll;
+import com.eduwin.modals.OpinionPollBean;
+import com.eduwin.modals.UserOpinionPollBean;
+import com.eduwin.services.AboutUsService;
+import com.eduwin.services.OpinionPollService;
 
 import play.db.jpa.Transactional;
 import play.Logger;

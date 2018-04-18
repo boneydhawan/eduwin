@@ -1,4 +1,4 @@
-package com.tekizma.modals;
+package com.eduwin.modals;
 
 
 public class UserOpinionPollBean {

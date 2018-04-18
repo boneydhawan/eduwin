@@ -9,12 +9,10 @@ import javax.inject.Inject;
 
 import org.apache.commons.lang3.StringUtils;
 
-import com.tekizma.coreServices.CommonDao;
-import com.tekizma.entity.Galary;
-
-import com.tekizma.modals.GalaryBean;
-import com.tekizma.services.GalaryService;
-
+import com.eduwin.coreServices.CommonDao;
+import com.eduwin.entity.Galary;
+import com.eduwin.modals.GalaryBean;
+import com.eduwin.services.GalaryService;
 
 import play.db.jpa.JPAApi;
 /**

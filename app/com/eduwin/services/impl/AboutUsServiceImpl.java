@@ -8,11 +8,12 @@ import javax.inject.Inject;
 
 import org.springframework.beans.BeanUtils;
 
-import com.tekizma.coreServices.CommonDao;
-import com.tekizma.entity.AboutUs;
-import com.tekizma.entity.Locale;
-import com.tekizma.modals.AboutUsBean;
-import com.tekizma.services.AboutUsService;
+import com.eduwin.coreServices.CommonDao;
+import com.eduwin.entity.AboutUs;
+import com.eduwin.entity.Locale;
+import com.eduwin.modals.AboutUsBean;
+import com.eduwin.services.AboutUsService;
+
 import play.db.jpa.JPAApi;
 /**
 *

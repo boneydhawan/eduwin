@@ -1,14 +1,14 @@
+import com.eduwin.coreServices.CommonDao;
+import com.eduwin.coreServices.CommonDaoImpl;
+import com.eduwin.services.AboutUsService;
+import com.eduwin.services.GalaryService;
+import com.eduwin.services.LoginService;
+import com.eduwin.services.OpinionPollService;
 import com.eduwin.services.impl.AboutUsServiceImpl;
 import com.eduwin.services.impl.GalaryServiceImpl;
 import com.eduwin.services.impl.LoginServiceImpl;
 import com.eduwin.services.impl.OpinionPollServiceImpl;
 import com.google.inject.AbstractModule;
-import com.tekizma.coreServices.CommonDao;
-import com.tekizma.coreServices.CommonDaoImpl;
-import com.tekizma.services.AboutUsService;
-import com.tekizma.services.GalaryService;
-import com.tekizma.services.LoginService;
-import com.tekizma.services.OpinionPollService;
 
 /**
  * This class is a Guice module that tells Guice how to bind several

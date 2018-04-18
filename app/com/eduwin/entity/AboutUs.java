@@ -1,4 +1,4 @@
-package com.tekizma.entity;
+package com.eduwin.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

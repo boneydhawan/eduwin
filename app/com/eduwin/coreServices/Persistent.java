@@ -1,4 +1,4 @@
-package com.tekizma.coreServices;
+package com.eduwin.coreServices;
 
 import java.util.Date;
 import java.io.Serializable;

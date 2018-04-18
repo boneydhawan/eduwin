@@ -7,14 +7,11 @@ import java.util.Map;
 
 import javax.inject.Inject;
 
-
-import com.tekizma.coreServices.CommonDao;
-import com.tekizma.entity.OpinionPoll;
-import com.tekizma.entity.UserOpinionPoll;
-import com.tekizma.modals.OpinionPollBean;
-
-import com.tekizma.services.OpinionPollService;
-
+import com.eduwin.coreServices.CommonDao;
+import com.eduwin.entity.OpinionPoll;
+import com.eduwin.entity.UserOpinionPoll;
+import com.eduwin.modals.OpinionPollBean;
+import com.eduwin.services.OpinionPollService;
 
 import play.db.jpa.JPAApi;
 /**

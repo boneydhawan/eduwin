@@ -1,9 +1,9 @@
-package com.tekizma.services;
+package com.eduwin.services;
 
 import java.util.List;
 
-import com.tekizma.entity.Locale;
-import com.tekizma.modals.AboutUsBean;
+import com.eduwin.entity.Locale;
+import com.eduwin.modals.AboutUsBean;
 
 /**
 *

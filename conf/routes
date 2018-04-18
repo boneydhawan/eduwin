@@ -4,14 +4,14 @@
 
 # Home page
 
-POST   /register                     com.tekizma.controllers.LoginController.addUser()
-GET    /register                     com.tekizma.controllers.LoginController.addUser()
-GET   /getAboutUsInfo                com.tekizma.controllers.AboutUsController.getAboutUsInfo()
-GET   /getLocaleList                com.tekizma.controllers.AboutUsController.getLocaleList()
-GET   /getGalary                    com.tekizma.controllers.GalaryController.getGalryList()
-GET   /getOpinionPoll                   com.tekizma.controllers.OpinionPollController.getOpinionPollDetail()
-GET   /submitPoll                   com.tekizma.controllers.OpinionPollController.saveOpinionPollDetail()
-						
+POST   /register                     com.eduwin.controllers.LoginController.addUser()
+GET    /register                     com.eduwin.controllers.LoginController.addUser()
+GET   /getAboutUsInfo                com.eduwin.controllers.AboutUsController.getAboutUsInfo()
+GET   /getLocaleList                com.eduwin.controllers.AboutUsController.getLocaleList()
+GET   /getGalary                    com.eduwin.controllers.GalaryController.getGalryList()
+GET   /getOpinionPoll               com.eduwin.controllers.OpinionPollController.getOpinionPollDetail()
+GET   /submitPoll                   com.eduwin.controllers.OpinionPollController.saveOpinionPollDetail()
+GET   /getQuote                     com.eduwin.controllers.AboutUsController.getQuote()					
 
 # Map static resources from the /public folder to the /assets URL path
 #GET     /assets/*file               controllers.Assets.at(path="/public", file)

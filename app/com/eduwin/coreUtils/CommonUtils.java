@@ -1,4 +1,4 @@
-package com.tekizma.coreUtils;
+package com.eduwin.coreUtils;
 
 import java.util.List;
 

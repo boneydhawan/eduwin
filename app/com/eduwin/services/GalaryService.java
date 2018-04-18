@@ -1,8 +1,8 @@
-package com.tekizma.services;
+package com.eduwin.services;
 
 import java.util.List;
 
-import com.tekizma.modals.GalaryBean;
+import com.eduwin.modals.GalaryBean;
 
 /**
 *

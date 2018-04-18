@@ -1,4 +1,4 @@
-package com.tekizma.entity;
+package com.eduwin.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -11,7 +11,7 @@ import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import com.tekizma.coreServices.Persistent;
+import com.eduwin.coreServices.Persistent;
 
 @Entity
 @Table(name = "Users")

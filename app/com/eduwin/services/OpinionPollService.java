@@ -1,7 +1,7 @@
-package com.tekizma.services;
+package com.eduwin.services;
 
-import com.tekizma.entity.UserOpinionPoll;
-import com.tekizma.modals.OpinionPollBean;
+import com.eduwin.entity.UserOpinionPoll;
+import com.eduwin.modals.OpinionPollBean;
 
 /**
 *
