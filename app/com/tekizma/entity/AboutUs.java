@@ -48,7 +48,18 @@ public class AboutUs {
     @Column(name = "is_active")
     private long isActive;
     
-    @JoinColumn(name="locale_id", referencedColumnName="id")
+    @Column(name = "quote")
+    private String quote;
+    
+    public String getQuote() {
+		return quote;
+	}
+
+	public void setQuote(String quote) {
+		this.quote = quote;
+	}
+
+	@JoinColumn(name="locale_id", referencedColumnName="id")
 	@ManyToOne(optional=false)
     private Locale locale;
     

@@ -64,6 +64,21 @@ public class AboutUsServiceImpl implements AboutUsService{
 		Locale locale = (Locale) commonDao.findObjectByNamedQuery("Locale.findNameCode",params);
 		return locale;
 	}
+
+
+	@Override
+	public String getQuoteBasedonLocaleId(String localeId) {
+		Map<String, Object> params = new HashMap<String,Object>();
+		params.put("localeId", Long.parseLong(localeId));
+
+		AboutUs aboutUsDetail = (AboutUs) commonDao.findObjectByNamedQuery("AboutUs.findByLocaleId",params);
+		
+		if(aboutUsDetail != null){
+			return aboutUsDetail.getQuote();
+		}
+			
+		return null;
+	}
 	  
     
 

@@ -62,6 +62,25 @@ public class AboutUsController extends Controller {
     	List<Locale> localeList = aboutUsService.getLocaleList();
     	return  ok(toJson(localeList));
     }
+    
+    @Transactional
+    public Result getQuote() {
+    	Logger.debug("------Start : Inside getQuote");
+    	String quote = null;
+    	try{
+    		String localeId = request().getQueryString("localeId");
+    		if(StringUtils.isEmpty(localeId)){
+        		Locale locale = aboutUsService.getLocaleBasedOnNameCode("en");
+        		localeId = String.valueOf(locale.getId());
+        	}
+        	Logger.debug("Locale Id "+localeId);
+        	quote = aboutUsService.getQuoteBasedonLocaleId(localeId);
+    	}catch(Exception e){
+        	e.printStackTrace();
+        	return status(500,"Error while fetching quote");
+        }
+    	return  ok(toJson(quote));
+    }
     	
     
     
